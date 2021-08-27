@@ -31,7 +31,7 @@ namespace TechJobsOO
         // TODO: Generate Equals() and GetHashCode() methods.
         public override string ToString()
         {
-            return "\n" + "ID: " + this.Id + "\n";
+            return "\n" + "ID: " + this.Id + "\nName: " + this.Name + "\nEmployer: " + this.EmployerName + "\nLocation: " + this.EmployerLocation + "\nPosition Type: " + this.JobType + "\nCore Competency: " + this.JobCoreCompetency + "\n";
         }
     }
 }
