@@ -11,6 +11,7 @@ namespace TechJobsOO
         {
             Id = nextId;
             nextId++;
+            Value = "Data not available";
         }
 
         public PositionType(string value) : this()

@@ -11,6 +11,7 @@ namespace TechJobsOO
         {
             Id = nextId;
             nextId++;
+            Value = "Data not available";
         }
 
         // TODO: Add a second constructor to this class that uses the Location() constructor and sets the value of the value field.
