@@ -47,5 +47,12 @@ namespace TechJobsTests
             Job test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             Assert.AreEqual("\n" + "ID: " + test_job.Id + "\n", test_job.ToString());
         }
+
+        [TestMethod]
+        public void TestForEmptyField()
+        {
+            Job test_job = new ("Product tester", new Employer(), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            Assert.AreEqual("Data not available", test_job.EmployerName.ToString());
+        }
     }
 }
