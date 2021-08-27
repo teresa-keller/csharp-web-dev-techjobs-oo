@@ -32,5 +32,20 @@ namespace TechJobsTests
             Job second_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             Assert.IsFalse(first_job.Equals(second_job));
         }
+
+        [TestMethod]
+        public void TestForBlankLines()
+        {
+            Job test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            Assert.IsTrue(test_job.ToString().StartsWith("\n"));
+            Assert.IsTrue(test_job.ToString().EndsWith("\n"));
+        }
+
+        [TestMethod]
+        public void TestForLabelDataAndNewLine()
+        {
+            Job test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            Assert.AreEqual("\n" + "ID: " + test_job.Id + "\n", test_job.ToString());
+        }
     }
 }

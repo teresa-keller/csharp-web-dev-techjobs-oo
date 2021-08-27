@@ -29,5 +29,9 @@ namespace TechJobsOO
             JobCoreCompetency = jobCoreCompetency;
         }
         // TODO: Generate Equals() and GetHashCode() methods.
+        public override string ToString()
+        {
+            return "\n" + "ID: " + this.Id + "\n";
+        }
     }
 }
