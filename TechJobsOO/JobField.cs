@@ -14,12 +14,18 @@ namespace TechJobsOO
         {
             Id = nextId;
             nextId++;
-            Value = "Data not available";
         }
 
         public JobField(string value) : this()
         {
-            Value = value;
+            if (value.Equals(""))
+            {
+                Value = "Data not available";
+            } else
+            {
+                Value = value;
+            }
+           
         }
 
         public override bool Equals(object obj)
@@ -32,6 +38,6 @@ namespace TechJobsOO
         {
             return HashCode.Combine(Id);
         }
-
     }
 }
+           

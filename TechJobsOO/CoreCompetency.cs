@@ -1,26 +1,9 @@
 ﻿using System;
 namespace TechJobsOO
 {
-    public class CoreCompetency
+    public class CoreCompetency : JobField
     {
-        private int Id { get; }
-        private static int nextId = 1;
-        private string Value { get; set; }
-
-        // TODO: Change the fields to auto-implemented properties.
-
-        public CoreCompetency()
-        {
-            Id = nextId;
-            nextId++;
-            Value = "Data not available";
-        }
-
-        public CoreCompetency(string v) : this()
-        {
-            Value = v;
-        }
-
+        public CoreCompetency(string value) : base(value) { }
         public override string ToString()
         {
             return Value;

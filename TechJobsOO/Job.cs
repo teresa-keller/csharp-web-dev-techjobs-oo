@@ -18,6 +18,7 @@ namespace TechJobsOO
         {
             Id = nextId;
             nextId++;
+            Name = "ID only";
         }
 
         public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) : this()
@@ -31,7 +32,14 @@ namespace TechJobsOO
         // TODO: Generate Equals() and GetHashCode() methods.
         public override string ToString()
         {
-            return "\n" + "ID: " + this.Id + "\nName: " + this.Name + "\nEmployer: " + this.EmployerName + "\nLocation: " + this.EmployerLocation + "\nPosition Type: " + this.JobType + "\nCore Competency: " + this.JobCoreCompetency + "\n";
+            if (this.Name.Equals("ID only"))
+            {
+                return "OOPS! This job does not seem to exist.";
+            }
+            else
+            {
+                return "\n" + "ID: " + this.Id + "\nName: " + this.Name + "\nEmployer: " + this.EmployerName + "\nLocation: " + this.EmployerLocation + "\nPosition Type: " + this.JobType + "\nCore Competency: " + this.JobCoreCompetency + "\n";
+            }
         }
     }
 }
