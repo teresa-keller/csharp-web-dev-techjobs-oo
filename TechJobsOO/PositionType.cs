@@ -15,7 +15,6 @@ namespace TechJobsOO
             return HashCode.Combine(Id);
         }
 
-        // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
         public override string ToString()
         {
             return this.Value;

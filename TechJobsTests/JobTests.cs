@@ -51,7 +51,7 @@ namespace TechJobsTests
         [TestMethod]
         public void TestForEmptyField()
         {
-            Job test_job = new ("Product tester", new Employer("ACME"), new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            Job test_job = new("Product tester", new Employer("ACME"), new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             Assert.AreEqual("Data not available", test_job.EmployerLocation.ToString());
         }
     }

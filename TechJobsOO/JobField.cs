@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TechJobsOO
 {
@@ -21,11 +19,12 @@ namespace TechJobsOO
             if (value.Equals(""))
             {
                 Value = "Data not available";
-            } else
+            }
+            else
             {
                 Value = value;
             }
-           
+
         }
 
         public override bool Equals(object obj)
@@ -40,4 +39,3 @@ namespace TechJobsOO
         }
     }
 }
-           
